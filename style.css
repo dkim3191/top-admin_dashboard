@@ -1,0 +1,169 @@
+:root {
+    --color-blue: #1992D4;
+    --color-gray: #E2E8F0;
+    --color-white: #FFF;
+    --color-yellow: #F0B429;
+    --color-black: #000;
+    --text-color-gray: #636363;
+    --icon-color-gray: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 1px solid black; */
+}
+
+body {
+    height: 100vh;
+}
+
+.page-wrapper {
+    display: grid;
+    height: 100%;
+    overflow: auto;
+    grid-template:
+        'sidebar header' 170px
+        'sidebar main' 4fr
+        / 275px 1fr;
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--color-white);
+    display: grid;
+    grid-template:
+        'header-top' 1fr
+        'header-bottom' 1fr;
+    padding: 0 80px 10px 30px;
+}
+
+.header-top {
+    grid-area: header-top;
+    display: grid;
+    grid-template:
+        'search-icon search-bar notif-icon profile-picture-small header-top-username'
+        / 40px 1fr 30px 100px 150px;
+    align-items: center;
+}
+
+.seach-icon {
+    grid-area: search-icon;
+}
+
+.search-bar {
+    grid-area: search-bar;
+    border: none;
+    border-radius: 25px;
+    height: 35px;
+    background-color: var(--color-gray);
+    padding-left: 15px;
+    font-size: 1.1rem;
+    width: 90%;
+}
+
+.notif-icon {
+    grid-area: notif-icon;
+}
+
+.profile-picture.small {
+    grid-area: profile-picture-small;
+    justify-self: center;
+}
+
+.header-top-username {
+    grid-area: header-top-username;
+    font-size: 1.3rem;
+}
+
+.header p {
+    font-weight: bold;
+}
+
+.header-bottom {
+    grid-area: header-bottom;
+    display: grid;
+    grid-template:
+        'profile-picture-large user-greeting buttons'
+        / 100px 1fr auto;
+    align-items: center;
+}
+
+.profile-picture.large {
+    grid-area: profile-picture-large;
+}
+
+.user-greeting {
+    grid-area: user-greeting;
+}
+
+.user-greeting.top {
+    font-size: 0.9rem;
+}
+
+.user-greeting.bottom {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template: 'new-btn upload-btn share-btn';
+    gap: 20px;
+}
+
+.header button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    height: 45px;
+    width: 110px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 1.3rem;
+}
+
+.new-btn {
+    grid-area: new-btn;
+}
+
+.upload-btn {
+    grid-area: upload-btn;
+}
+
+.share-btn {
+    grid-area: share-btn;
+}
+
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-blue);
+    display: grid;
+    grid-template-rows: 100px repeat(10, 60px);
+    color: var(--color-white);
+    padding: 15px;
+}
+
+.sb-logo {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(338deg) brightness(101%) contrast(100%);
+}
+
+.sidebar-title span {
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--color-gray);
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+.projects {}
+
+.right-side {}
