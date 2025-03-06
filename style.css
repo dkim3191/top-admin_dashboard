@@ -22,7 +22,6 @@ body {
 
 .page-wrapper {
     display: grid;
-    height: 100%;
     overflow: auto;
     grid-template:
         'sidebar header' 170px
@@ -143,18 +142,20 @@ body {
     grid-area: sidebar;
     background-color: var(--color-blue);
     display: grid;
-    grid-template-rows: 100px repeat(10, 60px);
+    grid-template: 100px repeat(10, 60px) / 70px 1fr;
+    align-items: center;
     color: var(--color-white);
-    padding: 15px;
+    padding-left: 15px;
 }
 
 .sb-logo {
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(338deg) brightness(101%) contrast(100%);
+    justify-self: center;
+    height: 30px;
 }
 
-.sidebar-title span {
-    font-weight: bold;
-    font-size: 1.9rem;
+.sb-logo.large {
+    height: 60px;
 }
 
 .main {
