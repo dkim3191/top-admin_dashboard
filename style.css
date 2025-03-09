@@ -25,7 +25,7 @@ body {
     overflow: auto;
     grid-template:
         'sidebar header' 170px
-        'sidebar main' 4fr
+        'sidebar main' 1fr
         / 275px 1fr;
 }
 
@@ -168,7 +168,7 @@ body {
 }
 
 .main-subheading {
-    margin: 25px 0 10px 0;
+    margin: 30px 0 10px 0;
 }
 
 .cards {
@@ -179,12 +179,104 @@ body {
 
 .card {
     background-color: var(--color-white);
-    padding: 30px 20px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    height: 220px;
+    position: relative;
+}
+
+.card-title {
+    margin-bottom: 5px;
 }
 
 .yellow-stripe {
     background-color: var(--color-yellow);
-    width: 5px;
+    width: 7px;
     height: 100%;
-    /* display: inline; */
+    position: absolute;
+    margin: -30px -25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-text {
+    color: var(--text-color-gray);
+}
+
+.card-icons {
+    top: 160px;
+    left: 220px;
+    position: absolute;
+}
+
+.card-icons div {
+    height: 30px;
+    filter: invert(15%) sepia(0%) saturate(39%) hue-rotate(232deg) brightness(95%) contrast(83%);
+    display: inline;
+    margin: 0 10px;
+}
+
+.star-icon {
+    content: url(svgs/star-plus-outline.svg);
+}
+
+.eye-icon {
+    content: url(svgs/eye-plus-outline.svg);
+}
+
+.branch-icon {
+    content: url(svgs/merge.svg);
+    rotate: 90deg;
+}
+
+.announcements {
+    display: grid;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.announcements h4 {
+    margin-bottom: 3px;
+}
+
+.announcements p {
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+}
+
+.announcements div:not(:last-child) {
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+.announcements div:not(:first-child) {
+    padding-top: 15px;
+}
+
+
+.trending {
+    background-color: var(--color-white);
+    padding: 20px;
+    display: grid;
+    grid-template: repeat(4, 50px) / 50px auto;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.subtext {
+    color: var(--text-color-gray);
+}
+
+.pic1 {
+    filter: invert(39%) sepia(24%) saturate(5968%) hue-rotate(326deg) brightness(103%) contrast(104%);
+}
+
+.pic3 {
+    filter: invert(35%) sepia(89%) saturate(947%) hue-rotate(358deg) brightness(92%) contrast(108%);
+}
+
+.pic4 {
+    filter: invert(21%) sepia(46%) saturate(5399%) hue-rotate(273deg) brightness(94%) contrast(85%);
 }
